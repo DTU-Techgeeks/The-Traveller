@@ -1,3 +1,49 @@
 <resources>
     <string name="app_name">The Traveller</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."</string>
+
+    <string name="ob_header1">Real Time Locator</string>
+    <string name="ob_header4">Hotel Booking</string>
+    <string name="ob_header3">Know your destination better</string>
+    <string name="ob_header2">Organize Your Trips</string>
+    <string name="ob_header5">Shop</string>
+
+
+    <string name="ob_get_started">GET STARTED</string>
+
+    <string name="ob_desc1">For users travelling in unfamiliar cities, we provide real-time information about place including restaurants, hotels etc</string>
+    <string name="ob_desc4">Book your hotel conveniently.Hotels of different prices and location stand a click away.</string>
+    <string name="ob_desc3">The Traveller provides you with tons of information of the selected city.</string>
+    <string name="ob_desc2">Busy? Often forget about important meetings? Here we are to rescue!</string>
+    <string name="ob_desc5">Shop the latest item from the various city markets.</string>
+
+    <string name="e_mail">Email</string>
+    <string name="password">Password</string>
+    <string name="title_activity_maps">Map Activity</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="forever">Forever(Click to change)</string>
+
 </resources>
