@@ -91,7 +91,7 @@ public class BoardingActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                startActivity(new Intent(getBaseContext(),SplashActivity.class));
+                startActivity(new Intent(getBaseContext(),MainActivity.class));
                 finish();
             }
         });
