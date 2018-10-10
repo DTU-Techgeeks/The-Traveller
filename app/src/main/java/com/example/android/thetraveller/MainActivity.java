@@ -46,8 +46,15 @@ public class MainActivity extends AppCompatActivity {
                 .build();
         headerResult.updateProfile(profileDrawerItem);
 
-        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName("Home").withTextColor(Color.BLACK);
-        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(2).withName("Settings");
+        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName("Destination").withTextColor(Color.BLACK);
+        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(1).withName("Travel").withTextColor(Color.BLACK);
+        PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(1).withName("My Trips").withTextColor(Color.BLACK);
+        PrimaryDrawerItem item4 = new PrimaryDrawerItem().withIdentifier(1).withName("My Friends").withTextColor(Color.BLACK);
+        PrimaryDrawerItem item5 = new PrimaryDrawerItem().withIdentifier(1).withName("Utilities").withTextColor(Color.BLACK);
+
+        PrimaryDrawerItem item6 = new PrimaryDrawerItem().withIdentifier(2).withName("About us");
+        PrimaryDrawerItem item7 = new PrimaryDrawerItem().withIdentifier(2).withName("Sign Out");
+        PrimaryDrawerItem item8 = new PrimaryDrawerItem().withIdentifier(2).withName("Settings");
 
 //create the drawer and remember the `Drawer` result object
         Drawer result = new DrawerBuilder()
@@ -56,16 +63,21 @@ public class MainActivity extends AppCompatActivity {
                 .withToolbar(toolbar)
                 .addDrawerItems(
                         item1,
-                        new DividerDrawerItem(),
                         item2,
-                        new SecondaryDrawerItem().withName("S")
+                        item3,
+                        item4,
+                        item5,
+                        new DividerDrawerItem(),
+                        item6,
+                        item7,
+                        item8
                 )
                 .withOnDrawerItemClickListener(new Drawer.OnDrawerItemClickListener() {
                     @Override
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
 
                         switch (position){
-                            case 0 : startActivity(new Intent(getBaseContext(),SettingsActivity.class));
+                            case 0 : startActivity(new Intent(getBaseContext(),MainActivity.class));
                                 break;
                             case 1 :
                                 startActivity(new Intent(getBaseContext(),SettingsActivity.class));
