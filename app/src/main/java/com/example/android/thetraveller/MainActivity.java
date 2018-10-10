@@ -1,5 +1,6 @@
 package com.example.android.thetraveller;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -64,8 +65,11 @@ public class MainActivity extends AppCompatActivity {
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
 
                         switch (position){
-                            case 1 : break;
-                            case 2 : break;
+                            case 0 : startActivity(new Intent(getBaseContext(),SettingsActivity.class));
+                                break;
+                            case 1 :
+                                startActivity(new Intent(getBaseContext(),SettingsActivity.class));
+                                break;
                         }
                         return true;
                     }
