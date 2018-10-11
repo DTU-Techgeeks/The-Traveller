@@ -89,7 +89,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
             @Override
             public boolean onEditorAction(TextView textView, int id, KeyEvent keyEvent) {
                 if (id == EditorInfo.IME_ACTION_DONE || id == EditorInfo.IME_NULL) {
-                    attemptLogin();
+//                    attemptLogin();
                     return true;
                 }
                 return false;
@@ -109,7 +109,7 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
             public void onClick(View view) {
                 mView = new CatLoadingView();
                 mView.show(getSupportFragmentManager(), "");
-                attemptLogin();
+//                attemptLogin();
             }
         });
 
@@ -256,45 +256,45 @@ public class LoginActivity extends AppCompatActivity implements LoaderManager.Lo
         super.onBackPressed();
     }
 
-    private void attemptLogin() {
-        if (mAuthTask != null) {
-            return;
-        }
+//    private void attemptLogin() {
+//        if (mAuthTask != null) {
+//            return;
+//        }
 
-        mEmailView.setError(null);
-        mPasswordView.setError(null);
-
-        String email = mEmailView.getText().toString();
-        String password = mPasswordView.getText().toString();
-
-        boolean cancel = false;
-        View focusView = null;
-
-        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
-            mPasswordView.setError(getString(R.string.error_invalid_password));
-            focusView = mPasswordView;
-            cancel = true;
-        }
-
-        if (TextUtils.isEmpty(email)) {
-            mEmailView.setError(getString(R.string.error_field_required));
-            focusView = mEmailView;
-            cancel = true;
-        } else if (!isEmailValid(email)) {
-            mEmailView.setError(getString(R.string.error_invalid_email));
-            focusView = mEmailView;
-            cancel = true;
-        }
-
-        if (cancel) {
-            focusView.requestFocus();
-        } else {
-            showProgress(true);
+//        mEmailView.setError(null);
+//        mPasswordView.setError(null);
+//
+//        String email = mEmailView.getText().toString();
+//        String password = mPasswordView.getText().toString();
+//
+//        boolean cancel = false;
+//        View focusView = null;
+//
+//        if (!TextUtils.isEmpty(password) && !isPasswordValid(password)) {
+//            mPasswordView.setError(getString(R.string.error_invalid_password));
+//            focusView = mPasswordView;
+//            cancel = true;
+//        }
+//
+//        if (TextUtils.isEmpty(email)) {
+//            mEmailView.setError(getString(R.string.error_field_required));
+//            focusView = mEmailView;
+//            cancel = true;
+//        } else if (!isEmailValid(email)) {
+//            mEmailView.setError(getString(R.string.error_invalid_email));
+//            focusView = mEmailView;
+//            cancel = true;
+//        }
+//
+//        if (cancel) {
+//            focusView.requestFocus();
+//        } else {
+//            showProgress(true);
 //            mAuthTask = new UserLoginTask(email, password);
 //            mAuthTask.execute((Void) null);
 
-        }
-    }
+//        }
+//    }
 
     private boolean isEmailValid(String email) {
         return email.contains("@");

@@ -60,7 +60,7 @@
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            app:passwordToggleEnabled="true">
+            >
 
             <com.github.florent37.materialtextfield.MaterialTextField
                 android:layout_width="300dp"
