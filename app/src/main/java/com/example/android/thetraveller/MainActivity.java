@@ -19,7 +19,8 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
-public class MainActivity extends AppCompatActivity {
+//i
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Toolbar toolbar;
 
@@ -98,52 +99,39 @@ public class MainActivity extends AppCompatActivity {
         CardView kolkatacard= findViewById(R.id.kolkata);
         CardView chennaicard= findViewById(R.id.chennai);
 
-        chennaicard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(DescriptionActivity.this,LoadingScreenDelhi.class);
-                startActivity(i);
-            }
-        });
+        delhicard.setOnClickListener(this);
+        hyderabadcard.setOnClickListener(this);
+        kolkatacard.setOnClickListener(this);
+        bangalorecard.setOnClickListener(this);
+        mumbaicard.setOnClickListener(this);
+        chennaicard.setOnClickListener(this);
 
-        delhicard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(DescriptionActivity.this,LoadingScreenDelhi.class);
-                startActivity(i);
-            }
-        });
+    }
 
-        hyderabadcard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(DescriptionActivity.this,LoadingScreenHyderabad.class);
-                startActivity(i);
-            }
-        });
+    @Override
+    public void onClick(View view) {
+        switch(view.getId())
+        {
+            case R.id.mumbai:
+                startActivity(new Intent(getBaseContext(),LoadingScreenMumbai.class));
+                break;
+            case R.id.delhi:
+                startActivity(new Intent(getBaseContext(),LoadingScreenDelhi.class));
+                break;
+            case R.id.kolkata:
+                startActivity(new Intent(getBaseContext(),LoadingScreenKolkata.class));
+                break;
+            case R.id.bangalore:
+                startActivity(new Intent(getBaseContext(),LoadingScreenDelhi.class));
+                break;
+            case R.id.hyderabad:
+                startActivity(new Intent(getBaseContext(),LoadingScreenHyderabad.class));
+                break;
+            case R.id.chennai:
+                startActivity(new Intent(getBaseContext(),LoadingScreenChennai.class));
+                break;
 
-        bangalorecard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(DescriptionActivity.this,LoadingActivitybangalore.class);
-                startActivity(i);
-            }
-        });
-        kolkatacard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(DescriptionActivity.this,LoadingScreenDelhi.class);
-                startActivity(i);
-            }
-        });
 
-        mumbaicard.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i=new Intent(DescriptionActivity.this,LoadingScreenDelhi.class);
-                startActivity(i);
-            }
-        });
-
+        }
     }
 }
