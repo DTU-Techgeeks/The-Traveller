@@ -9,13 +9,26 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" />
+        <activity android:name=".DescriptionActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Hyderabad" />
+        <activity android:name=".Bangalore" />
+        <activity android:name=".Chennai" />
+        <activity android:name=".Mumbai" />
+        <activity android:name=".Kolkata" />
+        <activity android:name=".LoadingScreenDelhi" />
+        <activity android:name=".Delhi" />
+        <activity android:name=".LoadingScreenHyderabad" />
+        <activity android:name=".LoadingActivitybangalore" />
+        <activity android:name=".LoadingScreenMumbai" />
+        <activity android:name=".LoadingScreenChennai" />
+        <activity android:name=".LoadingScreenKolkata"></activity>
     </application>
 
 </manifest>
