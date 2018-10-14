@@ -11,6 +11,7 @@ import android.view.View;
 import com.example.android.thetraveller.MyFriends.MyFriendsActivity;
 import com.example.android.thetraveller.MyTrips.MyTripsActivity;
 import com.example.android.thetraveller.Travel.TravelActivity;
+import com.example.android.thetraveller.Utils.UtilActivity;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
@@ -35,10 +36,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         toolbar = findViewById(R.id.toolbarMain);
         toolbar.setTitle("The Traveller");
 
-        ProfileDrawerItem profileDrawerItem = new ProfileDrawerItem().withTextColor(Color.BLACK).withName("XYZ").withEmail("XYZ@gmail.com").withIcon(getResources().getDrawable(R.mipmap.ic_launcher));
+        ProfileDrawerItem profileDrawerItem = new ProfileDrawerItem().withTextColor(Color.GREEN).withName("XYZ").withEmail("XYZ123@gmail.com").withIcon(getResources().getDrawable(R.drawable.avatar));
         AccountHeader headerResult = new AccountHeaderBuilder()
                 .withActivity(this)
-                .withHeaderBackground(R.drawable.earth)
+                .withHeaderBackground(R.drawable.blue)
                 .addProfiles(
                         profileDrawerItem
                 )
@@ -51,15 +52,15 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 .build();
         headerResult.updateProfile(profileDrawerItem);
 
-        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName("Destination").withTextColor(Color.BLACK);
-        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(2).withName("Travel").withTextColor(Color.BLACK);
-        PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(3).withName("My Trips").withTextColor(Color.BLACK);
-        PrimaryDrawerItem item4 = new PrimaryDrawerItem().withIdentifier(4).withName("My Friends").withTextColor(Color.BLACK);
-        PrimaryDrawerItem item5 = new PrimaryDrawerItem().withIdentifier(5).withName("Utilities").withTextColor(Color.BLACK);
+        PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName("Destination").withIcon(R.drawable.destination).withTextColor(Color.BLACK);
+        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(2).withName("Travel").withIcon(R.drawable.travel_icon).withTextColor(Color.BLACK);
+        PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(3).withName("My Trips").withIcon(R.drawable.trip).withTextColor(Color.BLACK);
+        PrimaryDrawerItem item4 = new PrimaryDrawerItem().withIdentifier(4).withName("My Friends").withIcon(R.drawable.friend).withTextColor(Color.BLACK);
+        PrimaryDrawerItem item5 = new PrimaryDrawerItem().withIdentifier(5).withName("Utilities").withIcon(R.drawable.utilities).withTextColor(Color.BLACK);
 
-        PrimaryDrawerItem item6 = new PrimaryDrawerItem().withIdentifier(6).withName("About us");
-        PrimaryDrawerItem item7 = new PrimaryDrawerItem().withIdentifier(7).withName("Sign Out");
-        PrimaryDrawerItem item8 = new PrimaryDrawerItem().withIdentifier(8).withName("Settings");
+        PrimaryDrawerItem item6 = new PrimaryDrawerItem().withIdentifier(6).withName("About us").withIcon(R.drawable.about_us);
+        PrimaryDrawerItem item7 = new PrimaryDrawerItem().withIdentifier(7).withName("Sign Out").withIcon(R.drawable.logout);
+        PrimaryDrawerItem item8 = new PrimaryDrawerItem().withIdentifier(8).withName("Settings").withIcon(R.drawable.settings);
 
 //create the drawer and remember the `Drawer` result object
         Drawer result = new DrawerBuilder()
@@ -90,7 +91,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 break;
                             case 4 : startActivity(new Intent(getBaseContext(),MyFriendsActivity.class));
                                 break;
-                            case 5 : startActivity(new Intent(getBaseContext(),MainActivity.class));
+                            case 5 : startActivity(new Intent(getBaseContext(),UtilActivity.class));
                                 break;
                             case 6 : startActivity(new Intent(getBaseContext(),AboutUsActivity.class));
                                 break;

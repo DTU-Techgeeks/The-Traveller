@@ -309,4 +309,8 @@
     <string name="email_hello">Hello</string>
     <string name="email_send">Send Email</string>
     <string name="share_text">Hi! I found out this app for the travellers. Do download it : https://play.google.com/store/apps/details?id=io.github.project_travel_mate</string>
+    <string name="nearby_hospitals">Nearby Hospitals</string>
+    <string name="nearby_police_stations">Nearby Police Stations</string>
+    <string name="nearby_monuments">Nearby Monuments</string>
+    <string name="nearby_hotels">Nearby Hotels</string>
 </resources>
