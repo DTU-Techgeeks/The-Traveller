@@ -22,7 +22,15 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".PhoneAuth" />
-        <activity android:name=".DummyActivity"></activity>
+        <activity android:name=".DummyActivity" />
+        <activity android:name=".Travel.TravelActivity" />
+        <activity android:name=".AboutUsActivity" />
+        <activity android:name=".MyFriends.MyFriendsActivity" />
+        <activity android:name=".MyTrips.MyTripsActivity" />
+        <activity android:name=".Travel.HotelActivity" />
+        <activity android:name=".Travel.ShoppingActivity" />
+        <activity android:name=".Travel.MapViewRealtimeActivity" />
+        <activity android:name=".Utils.UtilActivity"></activity>
     </application>
 
 </manifest>
