@@ -18,10 +18,11 @@ public class LoadingActivitybangalore extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_loading_activitybangalore);
+      setContentView(R.layout.activity_loading_activitybangalore);
+
         gifImageView=findViewById(R.id.gifimage3);
         try {
-            InputStream inputStream=getAssets().open("loading4.gif");
+            InputStream inputStream=getAssets().open("loading.gif");
             byte[] bytes= IOUtils.toByteArray(inputStream);
             gifImageView.setBytes(bytes);
             gifImageView.startAnimation();
@@ -32,7 +33,7 @@ public class LoadingActivitybangalore extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                LoadingActivitybangalore.this.startActivity(new Intent(LoadingActivitybangalore.this,Delhi.class));
+                LoadingActivitybangalore.this.startActivity(new Intent(LoadingActivitybangalore.this,Bangalore.class));
                 LoadingActivitybangalore.this.finish();
             }
         },5000);

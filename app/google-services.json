@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "560243974073",
+    "firebase_url": "https://travellers-752d3.firebaseio.com",
+    "project_id": "travellers-752d3",
+    "storage_bucket": "travellers-752d3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:560243974073:android:8fe8d64b91a2d4ad",
+        "android_client_info": {
+          "package_name": "com.example.android.thetraveller"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "560243974073-f2gfril9hhffk2pjled4kosc40a2jqt1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.android.thetraveller",
+            "certificate_hash": "4ed1c73f79af18bc7366fd84c5e1b05905f23837"
+          }
+        },
+        {
+          "client_id": "560243974073-l7nil5d58v4bavo1bbm0k6bint5hp9kp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBX53ybtj1fcZ8kA3WapdNEc8FVKxF_XYc"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "560243974073-l7nil5d58v4bavo1bbm0k6bint5hp9kp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

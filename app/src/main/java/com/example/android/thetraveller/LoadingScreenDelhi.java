@@ -31,13 +31,13 @@ public class LoadingScreenDelhi extends AppCompatActivity {
         {
 
         }
-       new Handler().postDelayed(new Runnable() {
-           @Override
-           public void run() {
-               LoadingScreenDelhi.this.startActivity(new Intent(LoadingScreenDelhi.this,Delhi.class));
-               LoadingScreenDelhi.this.finish();
-           }
-       },3000);
-        }
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                LoadingScreenDelhi.this.startActivity(new Intent(LoadingScreenDelhi.this,Delhi.class));
+                LoadingScreenDelhi.this.finish();
+            }
+        },3000);
+    }
     }
 

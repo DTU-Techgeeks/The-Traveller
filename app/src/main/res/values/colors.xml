@@ -14,6 +14,9 @@
     <color name="peach">#FFFFB39A</color>
     <!--OnBoard-->
 
+
+    <color name="transparent">#00000000</color>
+
     <color name="selected_dot">#2D9CDB</color>
     <color name="idle_dot">#662D9CDB</color>
     <color name="ob_header">#4A4A4A</color>

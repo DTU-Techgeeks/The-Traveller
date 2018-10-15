@@ -19,7 +19,7 @@ import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
-//i
+
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     Toolbar toolbar;
@@ -113,22 +113,22 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch(view.getId())
         {
             case R.id.mumbai:
-                startActivity(new Intent(getBaseContext(),LoadingScreenMumbai.class));
+                startActivity(new Intent(MainActivity.this,LoadingScreenMumbai.class));
                 break;
             case R.id.delhi:
-                startActivity(new Intent(getBaseContext(),LoadingScreenDelhi.class));
+                startActivity(new Intent(MainActivity.this,LoadingScreenDelhi.class));
                 break;
             case R.id.kolkata:
-                startActivity(new Intent(getBaseContext(),LoadingScreenKolkata.class));
+                startActivity(new Intent(MainActivity.this,LoadingScreenKolkata.class));
                 break;
             case R.id.bangalore:
-                startActivity(new Intent(getBaseContext(),LoadingScreenDelhi.class));
+                startActivity(new Intent(MainActivity.this,LoadingActivitybangalore.class));
                 break;
             case R.id.hyderabad:
-                startActivity(new Intent(getBaseContext(),LoadingScreenHyderabad.class));
+                startActivity(new Intent(MainActivity.this,LoadingScreenHyderabad.class));
                 break;
             case R.id.chennai:
-                startActivity(new Intent(getBaseContext(),LoadingScreenChennai.class));
+                startActivity(new Intent(MainActivity.this,LoadingScreenChennai.class));
                 break;
 
 
