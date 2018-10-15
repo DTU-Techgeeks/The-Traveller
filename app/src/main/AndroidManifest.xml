@@ -11,7 +11,7 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/travel"
+        android:icon="@drawable/backpack"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -43,7 +43,6 @@
         <activity android:name=".Travel.MapViewRealtimeActivity" />
         <activity android:name=".Utils.UtilActivity" />
         <activity android:name=".Utils.ChecklistActivity" />
-        <activity android:name=".Utils.WeatherForecastActivity" />
         <activity android:name=".Utils.CompassActivity" />
         <activity android:name=".Utils.CurrencyActivity" />
         <meta-data
