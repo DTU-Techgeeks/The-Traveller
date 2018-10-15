@@ -34,12 +34,12 @@ public class AboutUsActivity extends AppCompatActivity {
             }
         });
 
-        cv_report_bug.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-
-            }
-        });
+//        cv_report_bug.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//
+//            }
+//        });
 
         cv_contact_us.setOnClickListener(new View.OnClickListener() {
             @Override

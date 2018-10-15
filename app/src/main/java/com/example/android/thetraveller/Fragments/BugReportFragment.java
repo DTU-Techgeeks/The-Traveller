@@ -20,7 +20,6 @@ import android.widget.TextView;
 import com.airbnb.lottie.LottieAnimationView;
 import com.example.android.thetraveller.Adapters.BugReportAdapter;
 import com.example.android.thetraveller.Models.Feedback;
-import com.example.android.thetraveller.R;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -44,16 +43,16 @@ import static com.example.android.thetraveller.Utils.Constants.USER_TOKEN;
 
 public class BugReportFragment extends Fragment {
 
-    @BindView(R.id.issues_list)
-    ListView issuesList;
-    @BindView(R.id.add_feedback)
-    FloatingActionButton addButton;
-    @BindView(R.id.animation_view)
-    LottieAnimationView animationView;
-    @BindView(R.id.text_view)
-    TextView textView;
-    @BindView(R.id.listview_title)
-    TextView listViewTitle;
+//    @BindView(R.id.issues_list)
+//    ListView issuesList;
+//    @BindView(R.id.add_feedback)
+//    FloatingActionButton addButton;
+//    @BindView(R.id.animation_view)
+//    LottieAnimationView animationView;
+//    @BindView(R.id.text_view)
+//    TextView textView;
+//    @BindView(R.id.listview_title)
+//    TextView listViewTitle;
 
     private String mAuthToken = null;
     private final List<Feedback> mFeedbacks = new ArrayList<>();
@@ -77,25 +76,28 @@ public class BugReportFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View mBugReportView = inflater.inflate(R.layout.fragment_bug_report, container, false);
-        ButterKnife.bind(this, mBugReportView);
+//        View mBugReportView = inflater.inflate(R.layout.fragment_bug_report, container, false);
+//        ButterKnife.bind(this, mBugReportView);
+//
+//        mAuthToken = getAuthToken();
+//
+//        addButton.setOnClickListener(v -> {
+//            Fragment fragment;
+//            FragmentManager fragmentManager = getFragmentManager();
+//            fragment = AddBugFragment.newInstance();
+//            fragmentManager.beginTransaction()
+//                    .addToBackStack(null)
+//                    .replace(R.id.inc, fragment).commit();
+//        });
+//        return mBugReportView;
+//    }
+//
+//    public String getAuthToken() {
+//        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(mActivity);
+//        return sharedPreferences.getString(USER_TOKEN, null);
 
-        mAuthToken = getAuthToken();
 
-        addButton.setOnClickListener(v -> {
-            Fragment fragment;
-            FragmentManager fragmentManager = getFragmentManager();
-            fragment = AddBugFragment.newInstance();
-            fragmentManager.beginTransaction()
-                    .addToBackStack(null)
-                    .replace(R.id.inc, fragment).commit();
-        });
-        return mBugReportView;
-    }
-
-    public String getAuthToken() {
-        SharedPreferences sharedPreferences = PreferenceManager.getDefaultSharedPreferences(mActivity);
-        return sharedPreferences.getString(USER_TOKEN, null);
+        return null;
     }
 
     /**
@@ -104,83 +106,83 @@ public class BugReportFragment extends Fragment {
      */
     private void getAllUserFeedback() {
 
-        Handler handler = new Handler(Looper.getMainLooper());
-
-        String url = API_LINK_V2 + "get-all-user-feedback";
-
-        //Set up client
-        OkHttpClient client = new OkHttpClient();
-        //Execute request
-        Request request = new Request.Builder()
-                .header("Authorization", "Token " + mAuthToken)
-                .url(url)
-                .build();
-
-        client.newCall(request).enqueue(new Callback() {
-            @Override
-            public void onFailure(Call call, IOException e) {
-                handler.post(() -> networkError());
-            }
-
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                handler.post(() -> {
-                    if (response.isSuccessful()) {
-                        try {
-                            final String res = Objects.requireNonNull(response.body()).string();
-                            JSONArray arr;
-                            arr = new JSONArray(res);
-                            if (arr.length() < 1) {
-                                noResult();
-                                return;
-                            }
-                            for (int i = 0; i < arr.length(); i++) {
-                                String type = arr.getJSONObject(i).getString("type");
-                                String text = arr.getJSONObject(i).getString("text");
-                                String dateCreated = arr.getJSONObject(i).getString("created");
-                                mFeedbacks.add(new Feedback(type, text, dateCreated));
-                                listViewTitle.setVisibility(View.VISIBLE);
-                                issuesList.setVisibility(View.VISIBLE);
-                                mAdapter = new BugReportAdapter(mActivity, mFeedbacks);
-                                issuesList.setAdapter(mAdapter);
-                                animationView.setVisibility(GONE);
-                            }
-                        } catch (JSONException | IOException e) {
-                            e.printStackTrace();
-                        }
-
-                    } else {
-                        handler.post(() -> noResult());
-                    }
-                });
-            }
-        });
+//        Handler handler = new Handler(Looper.getMainLooper());
+//
+//        String url = API_LINK_V2 + "get-all-user-feedback";
+//
+//        //Set up client
+//        OkHttpClient client = new OkHttpClient();
+//        //Execute request
+//        Request request = new Request.Builder()
+//                .header("Authorization", "Token " + mAuthToken)
+//                .url(url)
+//                .build();
+//
+//        client.newCall(request).enqueue(new Callback() {
+//            @Override
+//            public void onFailure(Call call, IOException e) {
+//                handler.post(() -> networkError());
+//            }
+//
+//            @Override
+//            public void onResponse(Call call, Response response) throws IOException {
+//                handler.post(() -> {
+//                    if (response.isSuccessful()) {
+//                        try {
+//                            final String res = Objects.requireNonNull(response.body()).string();
+//                            JSONArray arr;
+//                            arr = new JSONArray(res);
+//                            if (arr.length() < 1) {
+//                                noResult();
+//                                return;
+//                            }
+//                            for (int i = 0; i < arr.length(); i++) {
+//                                String type = arr.getJSONObject(i).getString("type");
+//                                String text = arr.getJSONObject(i).getString("text");
+//                                String dateCreated = arr.getJSONObject(i).getString("created");
+//                                mFeedbacks.add(new Feedback(type, text, dateCreated));
+//                                listViewTitle.setVisibility(View.VISIBLE);
+//                                issuesList.setVisibility(View.VISIBLE);
+//                                mAdapter = new BugReportAdapter(mActivity, mFeedbacks);
+//                                issuesList.setAdapter(mAdapter);
+//                                animationView.setVisibility(GONE);
+//                            }
+//                        } catch (JSONException | IOException e) {
+//                            e.printStackTrace();
+//                        }
+//
+//                    } else {
+//                        handler.post(() -> noResult());
+//                    }
+//                });
+//            }
+//        });
     }
 
     private void noResult() {
-        textView.setVisibility(View.VISIBLE);
-        listViewTitle.setVisibility(GONE);
-        animationView.setVisibility(View.VISIBLE);
-        animationView.setAnimation(R.raw.no_feedback);
-        animationView.playAnimation();
+//        textView.setVisibility(View.VISIBLE);
+//        listViewTitle.setVisibility(GONE);
+//        animationView.setVisibility(View.VISIBLE);
+//        animationView.setAnimation(R.raw.no_feedback);
+//        animationView.playAnimation();
     }
 
     private void networkError() {
-        animationView.setVisibility(View.VISIBLE);
-        animationView.setAnimation(R.raw.network_lost);
-        animationView.playAnimation();
+//        animationView.setVisibility(View.VISIBLE);
+//        animationView.setAnimation(R.raw.network_lost);
+//        animationView.playAnimation();
     }
 
-    @Override
-    public void onAttach(Context context) {
-        super.onAttach(context);
-        mActivity = (Activity) context;
-    }
+//    @Override
+//    public void onAttach(Context context) {
+//        super.onAttach(context);
+//        mActivity = (Activity) context;
+//    }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        mFeedbacks.clear();
-        getAllUserFeedback();
-    }
+//    @Override
+//    public void onResume() {
+//        super.onResume();
+//        mFeedbacks.clear();
+//        getAllUserFeedback();
+//    }
 }
