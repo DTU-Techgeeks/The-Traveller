@@ -8,6 +8,9 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.example.android.thetraveller.MyFriends.MyFriendsActivity;
+import com.example.android.thetraveller.MyTrips.MyTripsActivity;
+import com.example.android.thetraveller.Travel.TravelActivity;
 import com.mikepenz.materialdrawer.AccountHeader;
 import com.mikepenz.materialdrawer.AccountHeaderBuilder;
 import com.mikepenz.materialdrawer.Drawer;
@@ -49,14 +52,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         headerResult.updateProfile(profileDrawerItem);
 
         PrimaryDrawerItem item1 = new PrimaryDrawerItem().withIdentifier(1).withName("Destination").withTextColor(Color.BLACK);
-        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(1).withName("Travel").withTextColor(Color.BLACK);
-        PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(1).withName("My Trips").withTextColor(Color.BLACK);
-        PrimaryDrawerItem item4 = new PrimaryDrawerItem().withIdentifier(1).withName("My Friends").withTextColor(Color.BLACK);
-        PrimaryDrawerItem item5 = new PrimaryDrawerItem().withIdentifier(1).withName("Utilities").withTextColor(Color.BLACK);
+        PrimaryDrawerItem item2 = new PrimaryDrawerItem().withIdentifier(2).withName("Travel").withTextColor(Color.BLACK);
+        PrimaryDrawerItem item3 = new PrimaryDrawerItem().withIdentifier(3).withName("My Trips").withTextColor(Color.BLACK);
+        PrimaryDrawerItem item4 = new PrimaryDrawerItem().withIdentifier(4).withName("My Friends").withTextColor(Color.BLACK);
+        PrimaryDrawerItem item5 = new PrimaryDrawerItem().withIdentifier(5).withName("Utilities").withTextColor(Color.BLACK);
 
-        PrimaryDrawerItem item6 = new PrimaryDrawerItem().withIdentifier(2).withName("About us");
-        PrimaryDrawerItem item7 = new PrimaryDrawerItem().withIdentifier(2).withName("Sign Out");
-        PrimaryDrawerItem item8 = new PrimaryDrawerItem().withIdentifier(2).withName("Settings");
+        PrimaryDrawerItem item6 = new PrimaryDrawerItem().withIdentifier(6).withName("About us");
+        PrimaryDrawerItem item7 = new PrimaryDrawerItem().withIdentifier(7).withName("Sign Out");
+        PrimaryDrawerItem item8 = new PrimaryDrawerItem().withIdentifier(8).withName("Settings");
 
 //create the drawer and remember the `Drawer` result object
         Drawer result = new DrawerBuilder()
@@ -79,11 +82,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     public boolean onItemClick(View view, int position, IDrawerItem drawerItem) {
 
                         switch (position){
-                            case 0 : startActivity(new Intent(getBaseContext(),MainActivity.class));
+                            case 1 : startActivity(new Intent(getBaseContext(),MainActivity.class));
                                 break;
-                            case 1 :
-                                startActivity(new Intent(getBaseContext(),SettingsActivity.class));
+                            case 2 : startActivity(new Intent(getBaseContext(),TravelActivity.class));
                                 break;
+                            case 3 : startActivity(new Intent(getBaseContext(),MyTripsActivity.class));
+                                break;
+                            case 4 : startActivity(new Intent(getBaseContext(),MyFriendsActivity.class));
+                                break;
+                            case 5 : startActivity(new Intent(getBaseContext(),MainActivity.class));
+                                break;
+                            case 6 : startActivity(new Intent(getBaseContext(),AboutUsActivity.class));
+                                break;
+                            case 7 : startActivity(new Intent(getBaseContext(),MainActivity.class));
+                                break;
+                            case 8 : startActivity(new Intent(getBaseContext(),SettingsActivity.class));
+                                break;
+
                         }
                         return true;
                     }
