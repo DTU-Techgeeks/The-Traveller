@@ -42,7 +42,7 @@ public class UtilActivity extends AppCompatActivity implements CardViewOptionsAd
                 startActivity(new Intent(getBaseContext(),ChecklistActivity.class));
                 break;
             case 1 :
-                startActivity(new Intent(getBaseContext(),WeatherForecastActivity.class));
+//                startActivity(new Intent(getBaseContext(),WeatherForecastActivity.class));
                 break;
             case 2 :
                 startActivity(new Intent(getBaseContext(),CompassActivity.class));
