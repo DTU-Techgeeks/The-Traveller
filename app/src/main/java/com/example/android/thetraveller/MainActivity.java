@@ -101,7 +101,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 break;
                             case 6 : startActivity(new Intent(getBaseContext(),AboutUsActivity.class));
                                 break;
-                            case 7 : startActivity(new Intent(getBaseContext(),MainActivity.class));
+                            case 7 : finish();
                                 break;
                             case 8 : startActivity(new Intent(getBaseContext(),SettingsActivity.class));
                                 break;
