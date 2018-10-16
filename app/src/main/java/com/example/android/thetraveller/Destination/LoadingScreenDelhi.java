@@ -1,10 +1,11 @@
-package com.example.android.thetraveller;
+package com.example.android.thetraveller.Destination;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.android.thetraveller.R;
 import com.felipecsl.gifimageview.library.GifImageView;
 
 import org.apache.commons.io.IOUtils;
@@ -12,16 +13,16 @@ import org.apache.commons.io.IOUtils;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class LoadingScreenMumbai extends AppCompatActivity {
+public class LoadingScreenDelhi extends AppCompatActivity {
 
     private GifImageView gifImageView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_loading_screen_mumbai);
+        setContentView(R.layout.activity_loading_screen);
 
-        gifImageView=findViewById(R.id.gifimage3);
+        gifImageView=findViewById(R.id.gifimage1);
         try {
             InputStream inputStream=getAssets().open("loading.gif");
             byte[] bytes= IOUtils.toByteArray(inputStream);
@@ -34,9 +35,10 @@ public class LoadingScreenMumbai extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(LoadingScreenMumbai.this,Mumbai.class));
-                finish();
+                LoadingScreenDelhi.this.startActivity(new Intent(LoadingScreenDelhi.this,Delhi.class));
+                LoadingScreenDelhi.this.finish();
             }
         },3000);
     }
-}
+    }
+

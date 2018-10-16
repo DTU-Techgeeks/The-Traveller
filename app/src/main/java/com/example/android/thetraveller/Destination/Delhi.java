@@ -1,4 +1,4 @@
-package com.example.android.thetraveller;
+package com.example.android.thetraveller.Destination;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -7,7 +7,14 @@ import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
 
+import com.example.android.thetraveller.R;
+
 public class Delhi extends AppCompatActivity implements View.OnClickListener {
+
+    public static double lat = 28.7041;
+    public static double lon = 77.1025;
+    public static char interestedInfo;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +28,11 @@ public class Delhi extends AppCompatActivity implements View.OnClickListener {
         CardView cardInfo=findViewById(R.id.cardInfo);
         CardView cardSearch=findViewById(R.id.cardSearch);
 
-        //cardRestro.setOnClickListener(this);
-        //cardHospi.setOnClickListener(this);
-        //cardHotel.setOnClickListener(this);
+        cardRestro.setOnClickListener(this);
+        cardHospi.setOnClickListener(this);
+        cardHotel.setOnClickListener(this);
         cardInfo.setOnClickListener(this);
-       // cardMarket.setOnClickListener(this);
+        cardMarket.setOnClickListener(this);
         cardSearch.setOnClickListener(this);
     }
 
@@ -39,6 +46,23 @@ public class Delhi extends AppCompatActivity implements View.OnClickListener {
 
             case R.id.cardSearch:
                 startActivity( new Intent(Intent.ACTION_VIEW, Uri.parse("https://www.google.com")));
+                break;
+
+            case R.id.cardRestro:
+                interestedInfo = 'R';
+                startActivity(new Intent(getBaseContext(),CityMaps.class).putExtra("Activity", "Delhi"));
+                break;
+            case R.id.cardHotel:
+                interestedInfo = 'H';
+                startActivity(new Intent(getBaseContext(),CityMaps.class).putExtra("Activity", "Delhi"));
+                break;
+            case R.id.cardMarket:
+                interestedInfo = 'M';
+                startActivity(new Intent(getBaseContext(),CityMaps.class).putExtra("Activity", "Delhi"));
+                break;
+            case R.id.cardHospi:
+                interestedInfo = 'O';
+                startActivity(new Intent(getBaseContext(),CityMaps.class).putExtra("Activity", "Delhi"));
                 break;
 
         }

@@ -6,6 +6,10 @@ import android.os.Bundle;
 import android.support.v7.widget.CardView;
 import android.view.View;
 
+import com.example.android.thetraveller.Destination.LoadingActivitybangalore;
+import com.example.android.thetraveller.Destination.LoadingScreenDelhi;
+import com.example.android.thetraveller.Destination.LoadingScreenHyderabad;
+
 public class DescriptionActivity extends AppCompatActivity  {
 
     @Override

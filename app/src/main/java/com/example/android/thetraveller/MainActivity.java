@@ -8,6 +8,12 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 
+import com.example.android.thetraveller.Destination.LoadingActivitybangalore;
+import com.example.android.thetraveller.Destination.LoadingScreenChennai;
+import com.example.android.thetraveller.Destination.LoadingScreenDelhi;
+import com.example.android.thetraveller.Destination.LoadingScreenHyderabad;
+import com.example.android.thetraveller.Destination.LoadingScreenKolkata;
+import com.example.android.thetraveller.Destination.LoadingScreenMumbai;
 import com.example.android.thetraveller.MyFriends.MyFriendsActivity;
 import com.example.android.thetraveller.MyTrips.MyTripsActivity;
 import com.example.android.thetraveller.MyTrips.TripsActivity;
@@ -20,7 +26,6 @@ import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.DividerDrawerItem;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 import com.mikepenz.materialdrawer.model.ProfileDrawerItem;
-import com.mikepenz.materialdrawer.model.SecondaryDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IDrawerItem;
 import com.mikepenz.materialdrawer.model.interfaces.IProfile;
 
