@@ -48,6 +48,8 @@ dependencies {
     annotationProcessor 'com.jakewharton:butterknife-compiler:8.8.1'
     implementation 'com.github.florent37:materialtextfield:1.0.7'
 
+    implementation 'com.github.takusemba:spotlight:1.6.0'
+    implementation 'com.wdullaer:materialdatetimepicker:3.6.0'
     implementation 'com.airbnb.android:lottie:2.5.5'
     implementation 'com.github.dmytrodanylyk.android-process-button:library:1.0.4'
 

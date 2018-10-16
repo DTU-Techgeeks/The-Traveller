@@ -45,11 +45,11 @@ public class TravelActivity extends AppCompatActivity implements CardViewOptions
                 break;
             case 1:
 //                i = ShoppingCurrentCityActivity.getStartIntent(mActivity);
-                startActivity(new Intent(getBaseContext(),ShoppingActivity.class));
+                startActivity(new Intent(TravelActivity.this,ShoppingActivity.class));
                 break;
             case 2:
 //                i = MapViewRealTimeActivity.getStartIntent(mActivity);
-                startActivity(new Intent(getBaseContext(),MapsActivity.class));
+                startActivity(new Intent(TravelActivity.this,MapsActivity.class));
                 break;
         }
     }

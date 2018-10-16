@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android = "http://schemas.android.com/apk/res/android"
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.example.android.thetraveller">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COURSE_LOCATION" />
 
     <application
         android:allowBackup="true"
@@ -45,21 +47,28 @@
         <activity android:name=".infoKolkata" />
         <activity android:name=".infoHyd" />
         <activity android:name=".infoChennai" />
-        <activity android:name=".Travel.TravelActivity" tools:ignore="InnerclassSeparator" />
+        <activity
+            android:name=".Travel.TravelActivity"
+            tools:ignore="InnerclassSeparator" />
         <activity android:name=".AboutUsActivity" />
         <activity android:name=".MyFriends.MyFriendsActivity" />
         <activity android:name=".MyTrips.MyTripsActivity" />
         <activity android:name=".Travel.HotelActivity" />
         <activity android:name=".Travel.ShoppingActivity" />
         <activity android:name=".Travel.MapViewRealtimeActivity" />
-        <activity android:name=".Utils.UtilActivity"></activity>
-        <activity android:name=".Utils.CompassActivity"></activity>
-        <activity android:name=".Utils.CurrencyActivity"></activity>
-        <activity android:name=".Utils.ChecklistActivity"></activity>
-
+        <activity android:name=".Utils.UtilActivity" />
+        <activity android:name=".Utils.CompassActivity" />
+        <activity android:name=".Utils.CurrencyActivity" />
+        <activity android:name=".Utils.ChecklistActivity" />
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="@string/google_maps_key"/>
+            android:value="@string/map_key" />
+
+        <activity
+            android:name=".MyTrips.TripsActivity"
+            android:label="@string/title_activity_trips"
+            android:theme="@style/AppTheme"></activity>
     </application>
+
 </manifest>
