@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".info_mumbai">
+    tools:context=".Destination.info_mumbai">
     <ExpandableListView
         android:layout_width="match_parent"
         android:layout_height="match_parent"

@@ -4,13 +4,13 @@
     package="com.example.android.thetraveller">
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_COURSE_LOCATION" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/travel"
+        android:icon="@drawable/backpack"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
@@ -30,25 +30,25 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".PhoneAuth" />
         <activity android:name=".DummyActivity" />
-        <activity android:name=".Delhi" />
-        <activity android:name=".Hyderabad" />
-        <activity android:name=".Bangalore" />
-        <activity android:name=".Chennai" />
-        <activity android:name=".Mumbai" />
-        <activity android:name=".Kolkata" />
-        <activity android:name=".LoadingScreenMumbai" />
-        <activity android:name=".LoadingScreenChennai" />
-        <activity android:name=".LoadingScreenKolkata" />
-        <activity android:name=".LoadingActivitybangalore" />
-        <activity android:name=".LoadingScreenDelhi" />
-        <activity android:name=".LoadingScreenHyderabad" />
+        <activity android:name=".Destination.Delhi" />
+        <activity android:name=".Destination.Hyderabad" />
+        <activity android:name=".Destination.Bangalore" />
+        <activity android:name=".Destination.Chennai" />
+        <activity android:name=".Destination.Mumbai" />
+        <activity android:name=".Destination.Kolkata" />
+        <activity android:name=".Destination.LoadingScreenMumbai" />
+        <activity android:name=".Destination.LoadingScreenChennai" />
+        <activity android:name=".Destination.LoadingScreenKolkata" />
+        <activity android:name=".Destination.LoadingActivitybangalore" />
+        <activity android:name=".Destination.LoadingScreenDelhi" />
+        <activity android:name=".Destination.LoadingScreenHyderabad" />
         <activity android:name=".DescriptionActivity" />
-        <activity android:name=".InfoDelhi" />
-        <activity android:name=".info_bangalore" />
-        <activity android:name=".info_mumbai" />
-        <activity android:name=".infoKolkata" />
-        <activity android:name=".infoHyd" />
-        <activity android:name=".infoChennai" />
+        <activity android:name=".Destination.InfoDelhi" />
+        <activity android:name=".Destination.info_bangalore" />
+        <activity android:name=".Destination.info_mumbai" />
+        <activity android:name=".Destination.infoKolkata" />
+        <activity android:name=".Destination.infoHyd" />
+        <activity android:name=".Destination.infoChennai" />
         <activity
             android:name=".Travel.TravelActivity"
             tools:ignore="InnerclassSeparator" />
@@ -71,7 +71,8 @@
         <activity
             android:name=".MyTrips.TripsActivity"
             android:label="@string/title_activity_trips"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Destination.CityMaps"></activity>
     </application>
 
 </manifest>

@@ -1,10 +1,11 @@
-package com.example.android.thetraveller;
+package com.example.android.thetraveller.Destination;
 
 import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.android.thetraveller.R;
 import com.felipecsl.gifimageview.library.GifImageView;
 
 import org.apache.commons.io.IOUtils;

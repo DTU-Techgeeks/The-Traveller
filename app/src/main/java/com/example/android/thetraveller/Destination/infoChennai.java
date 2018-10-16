@@ -1,22 +1,29 @@
-package com.example.android.thetraveller;
+package com.example.android.thetraveller.Destination;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ExpandableListView;
 
+import com.airbnb.lottie.L;
+import com.example.android.thetraveller.ExpandableListAdapter;
+import com.example.android.thetraveller.R;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-public class infoKolkata extends AppCompatActivity {
+
+public class infoChennai extends AppCompatActivity {
     private ExpandableListView listView;
     private ExpandableListAdapter listAdapter;
     private List<String> listDataHeader;
     private HashMap<String,List<String>> listHash;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_info_kolkata);
+        setContentView(R.layout.activity_info_chennai);
+
         listView=(ExpandableListView) findViewById(R.id.lvExp);
         initData();
         listAdapter=new ExpandableListAdapter(this,listDataHeader,listHash);
