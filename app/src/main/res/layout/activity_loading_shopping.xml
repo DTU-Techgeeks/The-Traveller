@@ -4,10 +4,10 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HotelActivity">
-    <WebView
-        android:id="@+id/webview"
-
+    tools:context=".LoadingShopping">
+    <com.felipecsl.gifimageview.library.GifImageView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent"
+        android:id="@+id/gifimage3"
+        android:scaleType="fitXY"/>
 </LinearLayout>

@@ -9,6 +9,9 @@ import android.support.v7.widget.RecyclerView;
 
 
 import com.example.android.thetraveller.Adapters.CardViewOptionsAdapter;
+import com.example.android.thetraveller.HotelActivity;
+import com.example.android.thetraveller.LoadingHotel;
+import com.example.android.thetraveller.LoadingShopping;
 import com.example.android.thetraveller.Models.CardItemEntity;
 import com.example.android.thetraveller.R;
 
@@ -41,11 +44,11 @@ public class TravelActivity extends AppCompatActivity implements CardViewOptions
 
         switch (position) {
             case 0:
-                startActivity(new Intent(getBaseContext(),HotelActivity.class));
+                startActivity(new Intent(getBaseContext(),LoadingHotel.class));
                 break;
             case 1:
 //                i = ShoppingCurrentCityActivity.getStartIntent(mActivity);
-                startActivity(new Intent(TravelActivity.this,ShoppingActivity.class));
+                startActivity(new Intent(TravelActivity.this,LoadingShopping.class));
                 break;
             case 2:
 //                i = MapViewRealTimeActivity.getStartIntent(mActivity);

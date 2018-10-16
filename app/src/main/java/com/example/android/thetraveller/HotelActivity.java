@@ -1,4 +1,4 @@
-package com.example.android.thetraveller.Travel;
+package com.example.android.thetraveller;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -10,36 +10,37 @@ import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
 
-import com.example.android.thetraveller.R;
-
-public class ShoppingActivity extends AppCompatActivity {
+public class HotelActivity extends AppCompatActivity
+{
     private WebView webView = null;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_shopping);
+        setContentView(R.layout.activity_hotel);
+
         this.webView = (WebView) findViewById(R.id.webview);
 
         WebSettings webSettings = webView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-//new ShoppingActivity()Activity.WebViewClientImpl(ShoppingActivity.this);
-        WebViewClientImpl webViewClient = new WebViewClientImpl(ShoppingActivity.this);
+
+        WebViewClientImpl webViewClient = new WebViewClientImpl(HotelActivity.this);
         webView.setWebViewClient(webViewClient);
 
-        webView.loadUrl("https://www.amazon.in/");
+        webView.loadUrl("https://www.trivago.in/");
     }
     public class WebViewClientImpl extends WebViewClient
     {
 
         private Activity activity = null;
 
-        public WebViewClientImpl(ShoppingActivity activity) {
+        public WebViewClientImpl(HotelActivity activity) {
             this.activity = activity;
         }
 
         @Override
         public boolean shouldOverrideUrlLoading(WebView webView, String url) {
-            if(url.indexOf("amazon.in") > -1 ) return false;
+            if(url.indexOf("trivago.in") > -1 ) return false;
 
             Intent intent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
             activity.startActivity(intent);

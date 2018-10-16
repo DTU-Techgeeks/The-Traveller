@@ -55,7 +55,6 @@
         <activity android:name=".AboutUsActivity" />
         <activity android:name=".MyFriends.MyFriendsActivity" />
         <activity android:name=".MyTrips.MyTripsActivity" />
-        <activity android:name=".Travel.HotelActivity" />
         <activity android:name=".Travel.ShoppingActivity" />
         <activity android:name=".Travel.MapViewRealtimeActivity" />
         <activity android:name=".Travel.MapsActivity" />
@@ -73,7 +72,11 @@
             android:label="@string/title_activity_trips"
             android:theme="@style/AppTheme" />
         <activity android:name=".AddTrip" />
-        <activity android:name=".LoadingHotel"></activity>
+        <activity android:name=".LoadingHotel" />
+        <activity android:name=".HotelActivity" />
+        <activity android:name=".LoadingShopping" />
+        <activity android:name=".Conversion" />
+        <activity android:name=".WeatherActivity"></activity>
     </application>
 
 </manifest>

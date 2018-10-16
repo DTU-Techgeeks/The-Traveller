@@ -5,6 +5,7 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
+import com.example.android.thetraveller.Travel.ShoppingActivity;
 import com.felipecsl.gifimageview.library.GifImageView;
 
 import org.apache.commons.io.IOUtils;
@@ -12,12 +13,14 @@ import org.apache.commons.io.IOUtils;
 import java.io.IOException;
 import java.io.InputStream;
 
-public class LoadingHotel extends AppCompatActivity {
+public class LoadingShopping extends AppCompatActivity
+{
     private GifImageView gifImageView;
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_loading_hotel);
+        setContentView(R.layout.activity_loading_shopping);
         gifImageView=findViewById(R.id.gifimage3);
         try {
             InputStream inputStream=getAssets().open("loading4.gif");
@@ -31,7 +34,7 @@ public class LoadingHotel extends AppCompatActivity {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-               startActivity(new Intent(LoadingHotel.this,HotelActivity.class));
+                startActivity(new Intent(LoadingShopping.this,ShoppingActivity.class));
                 finish();
             }
         },3000);

@@ -10,8 +10,10 @@ import android.support.v7.widget.RecyclerView;
 import android.widget.LinearLayout;
 
 import com.example.android.thetraveller.Adapters.CardViewOptionsAdapter;
+import com.example.android.thetraveller.Conversion;
 import com.example.android.thetraveller.Models.CardItemEntity;
 import com.example.android.thetraveller.R;
+import com.example.android.thetraveller.WeatherActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -42,13 +44,13 @@ public class UtilActivity extends AppCompatActivity implements CardViewOptionsAd
                 startActivity(new Intent(getBaseContext(),ChecklistActivity.class));
                 break;
             case 1 :
-//                startActivity(new Intent(getBaseContext(),WeatherForecastActivity.class));
+               startActivity(new Intent(getBaseContext(),WeatherActivity.class));
                 break;
             case 2 :
                 startActivity(new Intent(getBaseContext(),CompassActivity.class));
                 break;
             case 3 :
-                startActivity(new Intent(getBaseContext(),CurrencyActivity.class));
+                startActivity(new Intent(getBaseContext(),Conversion.class));
                 break;
         }
     }
