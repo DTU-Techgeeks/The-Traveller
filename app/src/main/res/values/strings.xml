@@ -153,7 +153,7 @@
     <string name="share_contact_qr">Hey! Here is my contact information. Shared Using Travel Mate app. Download it from Play Store : https://play.google.com/store/apps/details/?id=io.github.project.project_travel_mate</string>
     <string name="view_contact">View someone\'s Contact</string>
     <string name="bottom_info_string">Share this code with the people to share your contact details.</string>
-<string name="map_key">AIzaSyDxRfxqFdgUlccCFu65mDq2C9Ao33G9q4A</string>
+    <string name="map_key">AIzaSyDxRfxqFdgUlccCFu65mDq2C9Ao33G9q4A</string>
     <!-- Constant texts -->
     <string name="text_hangout">Hangout</string>
     <string name="text_monuments">Monuments</string>

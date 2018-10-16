@@ -10,6 +10,7 @@ import android.view.View;
 
 import com.example.android.thetraveller.MyFriends.MyFriendsActivity;
 import com.example.android.thetraveller.MyTrips.MyTripsActivity;
+import com.example.android.thetraveller.MyTrips.TripsActivity;
 import com.example.android.thetraveller.Travel.TravelActivity;
 import com.example.android.thetraveller.Utils.UtilActivity;
 import com.mikepenz.materialdrawer.AccountHeader;
@@ -87,7 +88,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                                 break;
                             case 2 : startActivity(new Intent(getBaseContext(),TravelActivity.class));
                                 break;
-                            case 3 : startActivity(new Intent(getBaseContext(),MyTripsActivity.class));
+                            case 3 : startActivity(new Intent(getBaseContext(),TripsActivity.class));
                                 break;
                             case 4 : startActivity(new Intent(getBaseContext(),MyFriendsActivity.class));
                                 break;
