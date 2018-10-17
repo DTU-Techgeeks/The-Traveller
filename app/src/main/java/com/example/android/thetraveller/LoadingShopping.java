@@ -37,6 +37,6 @@ public class LoadingShopping extends AppCompatActivity
                 startActivity(new Intent(LoadingShopping.this,ShoppingActivity.class));
                 finish();
             }
-        },3000);
+        },6000);
     }
 }

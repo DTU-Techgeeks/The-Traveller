@@ -34,6 +34,6 @@ public class LoadingHotel extends AppCompatActivity {
                startActivity(new Intent(LoadingHotel.this,HotelActivity.class));
                 finish();
             }
-        },3000);
+        },6000);
     }
 }

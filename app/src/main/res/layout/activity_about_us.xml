@@ -1,9 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".AboutUsActivity">
 
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_margin="15sp">
+<ImageView
+    android:layout_width="70sp"
+    android:layout_height="70sp"
+    android:layout_gravity="center"
+    android:src="@drawable/about_us"/>
+        <TextView
+            android:gravity="center|center_horizontal"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:textStyle="bold"
+            android:textSize="26sp"
+            android:text="Made with love by:"/>
+
+    <TextView
+        android:text="TechGeeks: Dhruv Jain and Anukriti "
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|center_horizontal"
+        android:textSize="18sp"
+        />
+   </LinearLayout>
+
+
+
+</RelativeLayout>
