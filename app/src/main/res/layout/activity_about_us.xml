@@ -16,7 +16,7 @@
     android:layout_width="70sp"
     android:layout_height="70sp"
     android:layout_gravity="center"
-    android:src="@drawable/about_us"/>
+    android:src="@drawable/friendship"/>
         <TextView
             android:gravity="center|center_horizontal"
             android:layout_height="wrap_content"
